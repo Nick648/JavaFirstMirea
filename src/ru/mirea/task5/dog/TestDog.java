@@ -1,4 +1,4 @@
-package ru.mirea.task5;
+package ru.mirea.task5.dog;
 
 public class TestDog {
     public static void main(String[] args) {

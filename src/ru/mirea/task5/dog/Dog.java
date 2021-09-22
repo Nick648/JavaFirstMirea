@@ -1,4 +1,4 @@
-package ru.mirea.task5;
+package ru.mirea.task5.dog;
 import java.lang.*;
 
 public abstract class Dog {

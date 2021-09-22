@@ -1,4 +1,4 @@
-package ru.mirea.task5;
+package ru.mirea.task5.dog;
 
 class Shepherd extends Dog{
     private int age;
