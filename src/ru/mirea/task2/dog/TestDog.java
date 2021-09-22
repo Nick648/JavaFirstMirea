@@ -1,4 +1,4 @@
-package ru.mirea.task2.Dog;
+package ru.mirea.task2.dog;
 
 import java.lang.*;
 public class TestDog {

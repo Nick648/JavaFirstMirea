@@ -1,4 +1,4 @@
-package ru.mirea.task3.Book;
+package ru.mirea.task3.book;
 
 public class Book {
     private String author;

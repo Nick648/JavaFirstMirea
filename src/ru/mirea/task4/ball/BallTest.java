@@ -1,4 +1,4 @@
-package ru.mirea.task4.Ball;
+package ru.mirea.task4.ball;
 import java.lang.*;
 
 public class BallTest {

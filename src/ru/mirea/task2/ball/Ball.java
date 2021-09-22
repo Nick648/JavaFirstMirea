@@ -1,4 +1,4 @@
-package ru.mirea.task2.Ball;
+package ru.mirea.task2.ball;
 
 public class Ball {
     private double x = 0.0;

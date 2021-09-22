@@ -1,4 +1,4 @@
-package ru.mirea.task4.Author;
+package ru.mirea.task4.author;
 import java.lang.*;
 
 public class TestAuthor {

@@ -1,4 +1,4 @@
-package ru.mirea.task2.Ball;
+package ru.mirea.task2.ball;
 
 public class TestBall {
     public static void main(String[] args) {

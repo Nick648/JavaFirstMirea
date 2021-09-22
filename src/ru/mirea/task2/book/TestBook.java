@@ -1,4 +1,4 @@
-package ru.mirea.task2.Book;
+package ru.mirea.task2.book;
 import java.lang.*;
 public class TestBook {
     public static void main (String[] args){
