@@ -1,5 +1,5 @@
 package ru.mirea.task6.nameable;
-import java.lang.*;
+
 public class Test {
     public static void main(String[] args) {
         Planet p1 = new Planet("Mars", 4);
