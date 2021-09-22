@@ -1,4 +1,4 @@
-package ru.mirea.task6;
+package ru.mirea.task6.priceable;
 
 public class Slave implements Priceable{
     private String name;

@@ -1,4 +1,4 @@
-package ru.mirea.task6;
+package ru.mirea.task6.priceable;
 
 class Book implements Priceable{
     private String name;
