@@ -8,7 +8,7 @@ import java.util.Random;
 public class Panel extends JPanel{
     private static final int num = 20;
     private static final int color = 255;
-    private static final int size = 50;
+    private static final int size = 40;
 
     private final List<Object> shapes = new ArrayList<>();
     private final Random random = new Random();
@@ -19,7 +19,7 @@ public class Panel extends JPanel{
         this.maxX = maxX;
         this.maxY = maxY;
 
-        for (int i = 0; i < num; ++i) {
+        for (int i = 0; i < num; i++) {
             int k = random.nextInt(10);
             if (k % 2 == 0) {
                 addRectangle();
@@ -43,11 +43,11 @@ public class Panel extends JPanel{
 
     private void addRectangle() {
         Color randomColor = new Color(random.nextInt(color), random.nextInt(color), random.nextInt(color));
-        shapes.add(new Rectangle(random.nextInt(maxX - 2 * size) + size, random.nextInt(maxX - 2 * size) + size, randomColor, size*1.5, size));
+        shapes.add(new Rectangle(random.nextInt(maxX - 3 * size) + size, random.nextInt(maxX - 3 * size) + size, randomColor, size*1.5, size));
     }
 
     private void addCircle() {
         Color randomColor = new Color(random.nextInt(color), random.nextInt(color), random.nextInt(color));
-        shapes.add(new Circle(random.nextInt(maxX - 2 * size) + size, random.nextInt(maxY - 2 * size) + size, randomColor, size));
+        shapes.add(new Circle(random.nextInt(maxX - 3 * size) + size, random.nextInt(maxY - 3 * size) + size, randomColor, size));
     }
 }
