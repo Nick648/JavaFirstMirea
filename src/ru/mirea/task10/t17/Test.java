@@ -2,7 +2,7 @@ package ru.mirea.task10.t17;
 import java.util.Scanner;
 
 public class Test {
-    public static int maxi(int n){
+    private static int maxi(int n){
         Scanner in = new Scanner(System.in);
         System.out.print("Number: ");
         int n1 = in.nextInt();
