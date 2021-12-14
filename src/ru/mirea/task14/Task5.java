@@ -19,18 +19,22 @@ public class Task5 {
         JFrame frame = new JFrame();
         frame.setLocationRelativeTo(null);
         JPanel mainPanel = new JPanel(new BorderLayout());
-        JButton resetButton = new JButton("Input");
+        JButton resetButton = new JButton("INPUT");
         JLabel firstPlayerLabel = new JLabel("Start cards for the first player");
         JLabel secondPlayerLabel = new JLabel("Start cards for the second player");
 
         firstPlayerLabel.setPreferredSize(new Dimension(100, 40));
         secondPlayerLabel.setPreferredSize(new Dimension(100, 40));
 
-        firstPlayerField.setMaximumSize(new Dimension(100, 40));
-        secondPlayerField.setMaximumSize(new Dimension(100, 40));
+        firstPlayerField.setMaximumSize(new Dimension(100, 50));
+        secondPlayerField.setMaximumSize(new Dimension(100, 50));
         firstPlayerLabel.setLabelFor(firstPlayerField);
         secondPlayerLabel.setLabelFor(secondPlayerField);
         resetButton.setPreferredSize(new Dimension(150,100));
+        /*
+        resetButton.setBackground(Color.GREEN);
+        resetButton.setOpaque(true);
+        */
         resetButton.addActionListener(actionEvent -> {
             boolean isValid;
             try {
@@ -45,14 +49,14 @@ public class Task5 {
             } else {
                 JOptionPane.showMessageDialog(
                         frame,
-                        "First string: " + firstPlayerField.getText() + "\nSecond string: " + secondPlayerField.getText(),
+                        "First string: " + firstPlayerField.getText() + "\nSecond string: " + secondPlayerField.getText() + "\nNeed 5 values for everyone!",
                         "Invalid input",
                         JOptionPane.ERROR_MESSAGE
                 );
             }
         });
         resetButton.setVisible(true);
-        gameResultLabel.setPreferredSize(new Dimension(200, 40));
+        gameResultLabel.setPreferredSize(new Dimension(200, 50));
 
 
         //mainPanel.add(secondPlayerLabel, BorderLayout.LINE_START);
@@ -60,7 +64,7 @@ public class Task5 {
         mainPanel.add(secondPlayerField, BorderLayout.LINE_END);
         mainPanel.add(resetButton, BorderLayout.PAGE_START);
         mainPanel.add(gameResultLabel, BorderLayout.PAGE_END);
-        //mainPanel.add(firstPlayerLabel, BorderLayout.BEFORE_FIRST_LINE);
+        //mainPanel.add(firstPlayerLabel, BorderLayout.NORTH);
         frame.add(mainPanel);
 
         frame.pack();
@@ -87,7 +91,7 @@ public class Task5 {
         int counter = 0;
         while (!first.empty() && !second.empty()) {
             if (counter >= 106) {
-                gameResultLabel.setText("Ladies and gentlemen, we have a draw! botwa");
+                gameResultLabel.setText("Ladies and gentlemen, we have a draw!  botwa");
                 break;
             }
             counter = doTurn(first, second, counter);
@@ -95,9 +99,13 @@ public class Task5 {
         }
 
         if (first.empty()) {
+            gameResultLabel.setBackground(Color.GREEN);
+            gameResultLabel.setOpaque(true);
             gameResultLabel.setText("Win: second! Number of parties: " + counter);
         }
         else if (second.empty()) {
+            gameResultLabel.setBackground(Color.GREEN);
+            gameResultLabel.setOpaque(true);
             gameResultLabel.setText("Win: first! Number of parties:  " + counter);
         }
     }
