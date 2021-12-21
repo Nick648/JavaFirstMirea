@@ -15,6 +15,5 @@ public class Opt {
 
         System.out.println("Сравнение: " + labelIcon.equals(labelIcon2));
         System.out.println("Сравнение: " + labelIcon.equals(labelDownMenu2));
-
     }
 }
